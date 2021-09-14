@@ -1,1 +1,13 @@
-
+#!/bin/bash
+#
+#PBS -P RDS-FEI-SCALUT-RW
+#PBS -N 2020m10d01__TU_PB2CSV
+#PBS -l select=1:ncpus=1:mem=24GB
+#PBS -l walltime=12:00:00
+#PBS -q defaultQ
+#
+cd \$PBS_O_WORKDIR
+#
+module load python/3.8.2
+#
+python SCALUT_DPL_TfNSW_GTFS-R_Bus_11_TU_PBtoCSV_v02A.py "/scratch/RDS-FEI-SCALUT-RW/TfNSW_GTFS_Buses" "2020m10d01"
